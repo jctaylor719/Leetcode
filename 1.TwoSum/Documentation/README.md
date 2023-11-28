@@ -8,7 +8,7 @@ When first considering a problem, I track what is given. In this case, the array
 
 Next, I consider any potential errors that could arise. 
 + What if none of the numbers in the array add to the target number?
-+ What if multiple indexes added to the target number?
++ What if multiple indexes add to the target number?
   + **Example:** ```Target = 4, nums = [1, 1, 2]```
 + What if there are multiple solutions?
 
