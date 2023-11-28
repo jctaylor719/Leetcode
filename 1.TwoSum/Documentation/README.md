@@ -12,7 +12,7 @@ Next, I consider any potential errors that could arise.
   + **Example:** ```Target = 4, nums = [1, 1, 2]```
 + What if there are multiple solutions?
 
-With this in mind, I create the easiest solution. We iterate through each number in the list and test if any combination adds to the target number:
+With this in mind, I create the worst-case solution. We iterate through each number in the list and test if any combination adds to the target number:
 
 ```
 for(int i = 0; i < list.size(); i++) {
@@ -24,22 +24,22 @@ for(int i = 0; i < list.size(); i++) {
 }
 ```
 
-### Error Handling
-
-Now that I have a simple solution created, I adjust my code to accomodate the potential errors I thought of earlier. 
-
-My first issue can easily be fixed by returning "No Solution" after the loop. 
-
-The second issue makes this problem a bit harder. What if it's the sum of three numbers? Four numbers? N numbers? This is where performance and dynamic programming come into play. 
-
-Before we can introduce additional sums, we need to optimize the two sum first. 
-
 ### Performance
 
-The time complexity of worst case is O(n^2). 
+The time complexity of the worst case is O(n^2). 
 
 The space complexity is O(1), because it uses a constant amount of extra space, irrespective of the input size.
 
 When thinking of ways to optimize this problem, I consider different data structures. I decided to use a hash map for this problem.
 
 ### New Approach: Hash Map
+
+Instead of comparing each number in the list, what if we iterated through the list, and stored the complement of each number (and its index) in the hash map?
+
+For example, consider the array ```nums = [3, 6, 2, 5, 1]``` with a target number of 7. 
+
+The complement of ```nums[0]``` is 4, because 7 - 3 = 4. We can then iterate through the rest of the list to see if there is a 4
+
+Since there is no 4 in the list, the map is now {3: 0}
+
+Using this approach, we get a new time complexity of O(n) and space complexity of O(n)
