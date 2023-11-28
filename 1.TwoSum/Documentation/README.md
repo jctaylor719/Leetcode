@@ -73,7 +73,7 @@ Using this approach, we get a new time complexity of O(n) and space complexity o
 
 This was made using C++. ```std::map``` utilizes the ```#include <map>``` library. 
 
-We use the ```count()``` function to search the container for elements with a key equivalent to k and return the number of matches (Boolean: 1 or 0)
+We use the ```count()``` function to search the container for elements with a key equivalent to k and return the number of matches (1 or 0)
 
 More information about maps can be found [Here](https://cplusplus.com/reference/map/map/) 
 
