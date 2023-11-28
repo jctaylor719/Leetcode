@@ -42,4 +42,47 @@ The complement of ```nums[0]``` is 4, because 7 - 3 = 4. We can then iterate thr
 
 Since there is no 4 in the list, the map is now {3: 0}
 
-Using this approach, we get a new time complexity of O(n) and space complexity of O(n)
+Now, let's see what this looks like implemented:
+
+```
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // Create the hashmap 
+        map<int, int> numMap;
+
+        // For all elements in the array, 
+        for (int i = 0; i < nums.size(); i++) {
+            // Calculate the number we're looking for
+            int complement = target - nums[i];
+            // If the complement exists, 
+            if (numMap.count(complement)) {
+                // Return answer indexes
+                return {numMap[complement], i};
+            }
+            // Add to hash table
+            numMap[nums[i]] = i;
+        }
+        // No solution
+        return {};
+    }
+};
+```
+
+Using this approach, we get a new time complexity of O(n) and space complexity of O(n).
+
+This was made using C++. ```std::map``` utilizes the ```#include <map>``` library. 
+
+We use the ```count()``` function to search the container for elements with a key equivalent to k and return the number of matches (Boolean: 1 or 0)
+
+More information about maps can be found [Here](https://cplusplus.com/reference/map/map/) 
+
+### Improvements
+
+Now that the approach is optimized, we can consider the error handling concerns we thought of earlier.
+
+We've already implemented a 'No Solution' case, and the hash map technique solves the multiple-solution problem for us.
+
+But what about ThreeSum? FourSum? How are these related? This project could definitely be improved to cover an n range of sums. 
+
+While this was a pretty easy assignment, I like to find new ways it could be improved. I would like to work on an NSum project in the near future. 
