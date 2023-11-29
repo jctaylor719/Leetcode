@@ -1,8 +1,6 @@
 # Documentation
 
-## My Solution
-
-### Introduction
+## Introduction
 
 When first considering a problem, I track what is given. In this case, the array ```nums[]``` was given, so there was no need to create a function that generates an array with a random size and random numbers at each index. 
 
@@ -24,7 +22,7 @@ for(int i = 0; i < list.size(); i++) {
 }
 ```
 
-### Performance
+## Performance
 
 The time complexity of the worst case is O(n^2). 
 
@@ -32,7 +30,7 @@ The space complexity is O(1), because it uses a constant amount of extra space, 
 
 When thinking of ways to optimize this problem, I consider different data structures. I decided to use a hash map for this problem.
 
-### New Approach: Hash Map
+## New Approach: Hash Map
 
 Instead of comparing each number in the list, what if we iterated through the list, and stored the complement of each number (and its index) in the hash map?
 
@@ -75,9 +73,9 @@ This was made using C++. ```std::map``` utilizes the ```#include <map>``` librar
 
 We use the ```count()``` function to search the container for elements with a key equivalent to k and return the number of matches (1 or 0)
 
-More information about maps can be found [Here](https://cplusplus.com/reference/map/map/) 
+More information about maps can be found [here](https://cplusplus.com/reference/map/map/) 
 
-### Improvements
+## Improvements
 
 Now that the approach is optimized, we can consider the error handling concerns we thought of earlier.
 
