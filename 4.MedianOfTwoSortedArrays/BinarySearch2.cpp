@@ -7,7 +7,7 @@ public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
     {
         // Lengths of each array and total length of combined array
-        int n1 = nums1.size()
+        int n1 = nums1.size();
         int n2 = nums2.size();
         int n  = n1 + n2;
 
@@ -17,7 +17,7 @@ public:
 
         // left partition size
         int left = (n1 + n2 + 1) / 2;
-        int low = 0
+        int low = 0;
         int high = n1;
 
         while (low <= high)
