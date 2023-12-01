@@ -6,21 +6,26 @@ class Solution
 public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
     {
-        int n1 = nums1.size(), n2 = nums2.size();
+        // Lengths of each array and total length of combined array
+        int n1 = nums1.size()
+        int n2 = nums2.size();
+        int n  = n1 + n2;
 
-        // Ensure nums1 is the smaller array for simplicity
+        // Ensure nums1 is the smaller array
         if (n1 > n2)
             return findMedianSortedArrays(nums2, nums1);
 
-        int n = n1 + n2;
-        int left = (n1 + n2 + 1) / 2; // Calculate the left partition size
-        int low = 0, high = n1;
+        // left partition size
+        int left = (n1 + n2 + 1) / 2;
+        int low = 0
+        int high = n1;
 
         while (low <= high)
         {
             int mid1 = (low + high) >> 1; // Calculate mid index for nums1
             int mid2 = left - mid1;       // Calculate mid index for nums2
 
+            // left minimum, right maximum
             int l1 = INT_MIN, l2 = INT_MIN, r1 = INT_MAX, r2 = INT_MAX;
 
             // Determine values of l1, l2, r1, and r2
@@ -53,6 +58,6 @@ public:
             }
         }
 
-        return 0; // If the code reaches here, the input arrays were not sorted.
+        return 0;
     }
 };
