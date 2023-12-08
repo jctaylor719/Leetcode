@@ -7,8 +7,7 @@ My goal is to complete one Leetcode problem a day. In order to practice using di
 I'll be adding sections to this ```README``` to organize problems by which language they were solved in.
 
 ## Problems Solved using C++
-
-Problems 1-10:
+### Problems 1-10
 1. Two Sum
 2. Add Two Numbers
 3. Longest Substring Without Repeating Characters
@@ -21,8 +20,7 @@ Problems 1-10:
 10. Regular Expression Matching
 
 ## Problems Solved using Python
-
-Problems 11-20:
+### Problems 11-20
 11. Container With Most Water
 12. Integer to Roman
 13. Roman to Integer
@@ -35,5 +33,4 @@ Problems 11-20:
 20. Valid Parentheses
 
 ## Problems Solved using Java
-
-Problems 21-30:
+### Problems 21-30
